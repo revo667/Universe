@@ -8,19 +8,29 @@
             margin: 0;
             overflow: hidden;
         }
+
+        #chatInput {
+            position: absolute;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 12px;
+            padding: 0;
+            z-index: 10;
+        }
+
+        #chatInput::placeholder {
+            color: var(--chat-dim, rgba(167, 139, 196, 0.4));
+        }
     </style>
     <title>
-        
         Universe
-
-
     </title>
-    
   </head>
   <body>
     <canvas id="space"></canvas>
+    <input id="chatInput" type="text" autocomplete="off" placeholder="Mesajınızı yazın..." />
     <script src="node_modules/gsap/dist/gsap.min.js"></script>
-    <script src="renderer.js"></script>
+    <script type="module" src="src/renderer.js"></script>
   </body>
-
 </html>
